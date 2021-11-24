@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/25 14:14:00 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/25 14:18:49 by elmestou         ###   ########.fr       */
+/*   Created: 2021/11/24 13:09:41 by elmestou          #+#    #+#             */
+/*   Updated: 2021/11/24 13:18:18 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*memchr(const void *s, int c, size_t n)
 {
+
 }
