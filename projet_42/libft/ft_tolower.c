@@ -6,11 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:09:18 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/08 14:09:25 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/21 19:00:31 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "includes/libft.h"
 
 int	tolower(int c)
 {

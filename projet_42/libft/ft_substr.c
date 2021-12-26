@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:12:44 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:58:48 by elmestou         ###   ########.fr       */
+/*   Created: 2021/12/21 15:41:28 by elmestou          #+#    #+#             */
+/*   Updated: 2021/12/21 19:00:00 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	ln;
+	char	*p;
+	int		i;
 
+	if (!s)
+		return (NULL);
+	p = malloc(sizeof(len) + 1);
+	if (!p)
+		return (NULL);
 	i = 0;
-	ln = 0;
-	while (src[ln] != '\0')
-		ln++;
-	if (size == 0)
-		return (ln);
-	while ((i < ln) && (i < size - 1))
+	while (start <= len)
 	{
-		dest[i] = src[i];
+		p[i] = s[start];
+		start++;
 		i++;
 	}
-	dest[i] = '\0';
-	return (ln);
+	p[i] = '\0';
+	return (p);
 }

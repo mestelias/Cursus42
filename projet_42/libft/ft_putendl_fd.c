@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 14:03:52 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:54:16 by elmestou         ###   ########.fr       */
+/*   Created: 2021/12/25 17:05:55 by elmestou          #+#    #+#             */
+/*   Updated: 2021/12/25 17:10:09 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int	ft_atoi(char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int		res;
-	int		i;
-	int		sign;
-
-	sign = 1;
-	res = 0;
-	i = 0;
-	if (str[i])
-	{
-		sign = -sign;
-		i++;
-	}
-	while (str[i] != '\0')
-	{
-		res = res * 10 + (str[i] - 48);
-		i++;
-	}
-	return (res * sign);
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

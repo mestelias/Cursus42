@@ -6,9 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:11:50 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/08 13:11:59 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:58:35 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "includes/libft.h"
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {

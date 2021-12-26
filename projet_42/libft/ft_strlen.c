@@ -6,13 +6,13 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:13:09 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/08 13:56:11 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/21 16:56:09 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "includes/libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int		i;
 

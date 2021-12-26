@@ -6,12 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 21:48:40 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/09 22:43:23 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:54:49 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

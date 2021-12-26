@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 14:03:52 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:54:16 by elmestou         ###   ########.fr       */
+/*   Created: 2021/12/04 16:21:08 by elmestou          #+#    #+#             */
+/*   Updated: 2021/12/21 18:59:27 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int	ft_atoi(char *str)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		res;
-	int		i;
-	int		sign;
+	size_t	i;
+	size_t	n;
 
-	sign = 1;
-	res = 0;
-	i = 0;
-	if (str[i])
-	{
-		sign = -sign;
-		i++;
-	}
-	while (str[i] != '\0')
-	{
-		res = res * 10 + (str[i] - 48);
-		i++;
-	}
-	return (res * sign);
+	if (!*little)
+		return ((char *)big);
+	i = -1;
+	n = ft_strlen(little);
+	while (big[++i] && i + n <= len)
+		if (!ft_strncmp(big + i, little, n))
+			return ((char *)big + i);
+	return (NULL);
 }

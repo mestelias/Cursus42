@@ -6,23 +6,21 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 10:02:57 by elmestou          #+#    #+#             */
-/*   Updated: 2021/09/26 15:34:44 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:59:45 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include "libft.h"
+#include "includes/libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen((char *)s);
 	while (i >= 0)
 	{
-		if (s[i] == (char)c)
-			return ((char*)s + i);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)s + i);
 		i--;
 	}
 	return (NULL);
