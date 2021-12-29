@@ -6,11 +6,11 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 17:10:40 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/25 17:18:51 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 10:34:38 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

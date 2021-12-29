@@ -6,11 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 14:14:00 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:57:23 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 10:33:29 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

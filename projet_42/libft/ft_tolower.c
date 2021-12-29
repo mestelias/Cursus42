@@ -6,15 +6,15 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:09:18 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 19:00:31 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 11:09:43 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	return (0);
+	return (c);
 }

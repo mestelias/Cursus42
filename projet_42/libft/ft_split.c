@@ -6,11 +6,11 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 16:53:22 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/26 15:33:42 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 10:35:09 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	cmptword(const char	*s, char c)
 {

@@ -6,15 +6,15 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 23:46:06 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:56:23 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 11:14:14 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if ((c >= 9 && c <= 13) || c == 32)
+	if ((c >= 32) && c <= 126)
 		return (1);
 	return (0);
 }

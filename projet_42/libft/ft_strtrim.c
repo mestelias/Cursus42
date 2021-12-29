@@ -6,11 +6,11 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 19:02:47 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/25 15:08:02 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 10:38:32 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_setcheck(char c, char const *set)
 {

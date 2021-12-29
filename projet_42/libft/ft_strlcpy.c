@@ -6,28 +6,29 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:12:44 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:58:48 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:41:56 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	unsigned int	i;
-	unsigned int	ln;
 
 	i = 0;
-	ln = 0;
-	while (src[ln] != '\0')
-		ln++;
-	if (size == 0)
-		return (ln);
-	while ((i < ln) && (i < size - 1))
+	if (!dst || !src)
+		return (0);
+	if (size > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (--size && src[i])
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dest[i] = '\0';
-	return (ln);
+	while (src[i])
+		i++;
+	return (i);
 }

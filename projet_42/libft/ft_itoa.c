@@ -6,49 +6,56 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 16:40:07 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/25 16:52:05 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:14:19 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
-void	convert(char *str, int nbr, int i)
+static int	ft_get_size_nbr(long nbr)
 {
-	i--;
+	int	count;
+
 	if (nbr < 0)
-		nbr = -nbr;
-	while (nbr > 0)
 	{
-		str[i] = (nbr % 10) + 48;
-		nbr = nbr / 10;
-		i--;
+		count = 1;
+		nbr *= -1;
 	}
+	else
+		count = 0;
+	while (nbr >= 10)
+	{
+		nbr /= 10;
+		count++;
+	}
+	count++;
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		nbr;
 	char	*str;
+	int		len_str;
+	long	nbr;
 
-	i = 0;
 	nbr = n;
-	if (n == -2147483648)
-		return ("-2147483648");
+	len_str = ft_get_size_nbr(nbr);
+	str = (char *)malloc(sizeof(char) * (len_str + 1));
+	if (str == NULL)
+		return (NULL);
 	if (nbr < 0)
 	{
-		i++;
-		nbr = -nbr;
-	}
-	while (nbr > 0)
-	{
-		nbr = nbr / 10;
-		i++;
-	}
-	str = malloc(sizeof(char) * (i + 1));
-	if (n < 0)
 		str[0] = '-';
-	str[i] = '\0';
-	convert(str, n, i);
+		nbr *= -1;
+	}
+	str[len_str] = '\0';
+	len_str--;
+	while (nbr >= 10)
+	{
+		str[len_str] = (nbr % 10) + '0';
+		nbr /= 10;
+		len_str--;
+	}
+	str[len_str] = nbr + '0';
 	return (str);
 }

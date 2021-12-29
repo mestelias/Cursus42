@@ -6,11 +6,11 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 16:21:08 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/21 18:59:27 by elmestou         ###   ########.fr       */
+/*   Updated: 2021/12/29 10:37:54 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	i = -1;
 	n = ft_strlen(little);
-	while (big[++i] && i + n <= len)
+	while (big[++i] && (i + n <= len))
 		if (!ft_strncmp(big + i, little, n))
 			return ((char *)big + i);
 	return (NULL);
