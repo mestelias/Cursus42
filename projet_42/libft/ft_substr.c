@@ -6,7 +6,7 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 15:41:28 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/29 17:29:46 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/01/03 15:28:08 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	i = ft_strlen(s);
-	if (start > len || start > i)
+	if (start > i)
 		return ((char *)ft_calloc(sizeof(char), 1));
 	if (len >= i - start)
 		p = (char *)malloc(sizeof(char) * (i - start + 1));
@@ -34,3 +34,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (p);
 }
+
