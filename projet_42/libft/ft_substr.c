@@ -6,7 +6,7 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 15:41:28 by elmestou          #+#    #+#             */
-/*   Updated: 2022/01/03 15:28:08 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/01/07 16:19:35 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (p);
 }
-
