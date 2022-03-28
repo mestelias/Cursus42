@@ -6,7 +6,7 @@
 #    By: elmestou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/30 16:44:52 by elmestou          #+#    #+#              #
-#    Updated: 2022/01/11 17:51:00 by elmestou         ###   ########.fr        #
+#    Updated: 2022/03/21 14:54:15 by elmestou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJ = ${SRCS:.c=.o}
 
 FLAGS = -Wall -Wextra -Werror
 
-INCLUDES= ./libft.h
+INCLUDES= ./printf.h
 
 %.c.o:
 	gcc $(FLAGS) -I $(INCLUDES) -c $< -o $(<:.c=.o)

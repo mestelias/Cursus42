@@ -6,11 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 19:35:04 by elmestou          #+#    #+#             */
-/*   Updated: 2022/01/07 19:47:27 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:03:16 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_convert_and_print(va_list list, t_data *data_list)
 {
@@ -21,7 +21,7 @@ int	ft_convert_and_print(va_list list, t_data *data_list)
 		res = ft_convert_s(list, res);
 	else if (data_list->conversion == 'c')
 		res = ft_convert_c(list, data_list, res);
-	else if(data_list->conversion == 'x' || data_list->conversion == 'X')
+	else if (data_list->conversion == 'x' || data_list->conversion == 'X')
 		res = ft_convert_x(list, data_list, res);
 	else if (data_list->conversion == '%')
 		res = ft_convert_pourcent(res);

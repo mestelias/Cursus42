@@ -6,13 +6,13 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 19:19:26 by elmestou          #+#    #+#             */
-/*   Updated: 2022/01/07 19:26:21 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/02/06 17:22:21 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *form,  ...)
+int	ft_printf(const char *form, ...)
 {
 	t_data	data_list;
 	va_list	list;

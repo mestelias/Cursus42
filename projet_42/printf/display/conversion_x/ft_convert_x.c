@@ -6,11 +6,11 @@
 /*   By: elmestou <elmestou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 17:32:58 by elmestou          #+#    #+#             */
-/*   Updated: 2022/01/11 17:35:05 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:07:44 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../../ft_printf.h"
 
 static char	*zero_case(char *res)
 {

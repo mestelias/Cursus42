@@ -6,11 +6,11 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 17:14:12 by elmestou          #+#    #+#             */
-/*   Updated: 2021/12/30 17:15:03 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/03/21 14:59:17 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_strdup(char *s)
 {

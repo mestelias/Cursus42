@@ -6,13 +6,13 @@
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 15:17:02 by elmestou          #+#    #+#             */
-/*   Updated: 2022/01/01 15:24:02 by elmestou         ###   ########.fr       */
+/*   Updated: 2022/03/25 14:55:24 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-static int	ft_get_size_nbr(long nbr, int base_len)
+static int	ft_get_size_nbr(unsigned long int nbr, int base_len)
 {
 	int		i;
 
@@ -25,7 +25,7 @@ static int	ft_get_size_nbr(long nbr, int base_len)
 	return (i);
 }
 
-static char	place_in_base(long nbr, int len_base)
+static char	place_in_base(unsigned long int nbr, int len_base)
 {
 	if (nbr % len_base >= 10)
 		return ((nbr % len_base) - 10 + 'a');
@@ -33,12 +33,12 @@ static char	place_in_base(long nbr, int len_base)
 		return ((nbr % len_base) + '0');
 }
 
-char	*ft_uitoa_base(unsigned long long int n, char *base)
+char	*ft_uitoa_base(unsigned long int n, char *base)
 {
-	char	*str;
-	int		len_str;
-	int		len_base;
-	long	nbr;
+	char				*str;
+	int					len_str;
+	int					len_base;
+	unsigned long int	nbr;
 
 	len_base = ft_strlen(base);
 	if (len_base == 10)
