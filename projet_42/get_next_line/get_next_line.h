@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elmestou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/30 17:11:29 by elmestou          #+#    #+#             */
-/*   Updated: 2022/03/21 14:59:01 by elmestou         ###   ########.fr       */
+/*   Created: 2022/03/31 15:30:04 by elmestou          #+#    #+#             */
+/*   Updated: 2022/03/31 16:05:25 by elmestou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	ft_putstr(char *str)
-{
-	int	i;
+# include <unistd.h>
+# include <stdlib.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strchr(char *s, int c);
+char	*ft_strdup( char *s);
+char	*ft_substr(char *s, unsigned int start, size_t len);
+
+#endif
